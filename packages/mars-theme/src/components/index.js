@@ -6,6 +6,8 @@ import Post from "./post";
 import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
+import Home from "./templates/Home";
+import Footer from "./footer";
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -33,20 +35,24 @@ const Theme = ({ state }) => {
       <Global styles={globalStyles} />
 
       {/* Add the header of the site. */}
-      <HeadContainer>
-        <Header />
-      </HeadContainer>
+
+
+
 
       {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
       <Main>
+        <Header />
         <Switch>
+          <Home when={data.isHome} />
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />
         </Switch>
       </Main>
+
+      <Footer />
     </>
   );
 };
@@ -56,8 +62,9 @@ export default connect(Theme);
 const globalStyles = css`
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Poppins";
+    font-size: 16px;
+    color: #343B4E;
   }
   a,
   a:visited {
@@ -66,19 +73,6 @@ const globalStyles = css`
   }
 `;
 
-const HeadContainer = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: #1f38c5;
-`;
 
 const Main = styled.div`
-  display: flex;
-  justify-content: center;
-  background-image: linear-gradient(
-    180deg,
-    rgba(66, 174, 228, 0.1),
-    rgba(66, 174, 228, 0)
-  );
 `;

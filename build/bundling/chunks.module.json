@@ -1,7 +1,7 @@
 {
   "errors": [],
   "warnings": [],
-  "hash": "86cc0880d46e678f4b1b",
+  "hash": "b2a73739c22c525a081e",
   "publicPath": "",
   "outputPath": "/Users/ironmac/Documents/1_Devlopp/personal-portfolio/build/static",
   "assetsByChunkName": {
@@ -23,7 +23,7 @@
     },
     {
       "name": "personal-portfolio.module.js",
-      "size": 6849454,
+      "size": 7005888,
       "chunks": [
         "personal-portfolio"
       ],

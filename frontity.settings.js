@@ -2,9 +2,9 @@ const settings = {
   "name": "personal-portfolio",
   "state": {
     "frontity": {
-      "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
+      "url": "https://www.tristantornatore.fr/",
+      "title": "Freelance Développeur Front-End | Wordpress | SEO&SEA - Tristan Tornatore",
+      "description": "Création et refonte de site web pour atteindre vos objectifs et faire des conversions sur le web. Découvrez mes projets. "
     }
   },
   "packages": [
@@ -14,25 +14,21 @@ const settings = {
         "theme": {
           "menu": [
             [
-              "Home",
-              "/"
+              "Développement web",
+              "/developpement-web/"
             ],
             [
-              "Nature",
-              "/category/nature/"
+              "Référencement naturel",
+              "/referencement-naturel-seo/"
             ],
             [
-              "Travel",
-              "/category/travel/"
+              "Blog",
+              "/astuces-digitales/"
             ],
             [
-              "Japan",
-              "/tag/japan/"
+              "Me contacter",
+              "/contacter-tristan-freelance-wordpress/"
             ],
-            [
-              "About Us",
-              "/about-us/"
-            ]
           ],
           "featured": {
             "showOnList": false,
@@ -45,7 +41,15 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://test.frontity.org"
+          "url": "https://www.tristantornatore.fr/",
+          "postTypes" : [
+            {
+            type: "projets",
+            endpoint: "projets",
+            archive: "/projets"
+          }
+        ],
+          postsPage: "/astuces-digitales/"
         }
       }
     },

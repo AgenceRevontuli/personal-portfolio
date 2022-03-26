@@ -6,14 +6,15 @@ import MobileMenu from "./menu";
 const Header = ({ state }) => {
   return (
     <>
-      <Container>
-        <StyledLink link="/">
-          <Title>{state.frontity.title}</Title>
-        </StyledLink>
-        <Description>{state.frontity.description}</Description>
-        <MobileMenu />
-      </Container>
-      <Nav />
+          <Container>
+            <Logo>
+              <Link link="/">
+                <span>TRISTAN TORNATORE</span>
+              </Link>
+            </Logo>
+            <MobileMenu />
+            <Nav />
+          </Container>
     </>
   );
 };
@@ -22,26 +23,16 @@ const Header = ({ state }) => {
 export default connect(Header);
 
 const Container = styled.div`
-  width: 848px;
+  background: url('https://www.tristantornatore.fr/wp-content/uploads/2022/03/background-noise.webp');
   max-width: 100%;
   box-sizing: border-box;
-  padding: 24px;
-  color: #fff;
+  padding: 24px 7%;
+  color: #343B4E;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 `;
 
-const Title = styled.h2`
-  margin: 0;
-  margin-bottom: 16px;
-`;
-
-const Description = styled.h4`
-  margin: 0;
-  color: rgba(255, 255, 255, 0.7);
-`;
-
-const StyledLink = styled(Link)`
-  text-decoration: none;
-`;
+const Logo = styled.div`
+  font-weight: 800;
+  letter-spacing: 0.1em;
+`

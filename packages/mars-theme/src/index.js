@@ -3,6 +3,21 @@ import image from "@frontity/html2react/processors/image";
 import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
 
+const acfOptionsHandler = {
+  pattern: "acf-options-page",
+  func: async ({ route, state, libraries }) => {
+    // 1. Get ACF option page from REST API.
+    const response = await libraries.source.api.get({
+      endpoint: `/acf/v3/options/options`
+    });
+    const option = await response.json();
+
+    // 2. Add data to `source`.
+    const data = state.source.get(route);
+    Object.assign(data, { ...option, isAcfOptionsPage: true });
+  }
+};
+
 const marsTheme = {
   name: "@frontity/mars-theme",
   roots: {
@@ -40,6 +55,9 @@ const marsTheme = {
       closeMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = false;
       },
+      beforeSSR: async ({ state, actions }) => {
+        await actions.source.fetch("/projets");
+      },
     },
   },
   libraries: {
@@ -51,7 +69,10 @@ const marsTheme = {
        */
       processors: [image, iframe, link],
     },
+    source: {
+      handlers: [acfOptionsHandler],
+    },
   },
-};
+}
 
 export default marsTheme;
