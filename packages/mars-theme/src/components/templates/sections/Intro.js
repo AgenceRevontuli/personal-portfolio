@@ -28,7 +28,6 @@ const Intro = ({ state }) => {
 export default connect(Intro);
 
 const Section = styled.div`
-    padding: 150px 7%;
 `
 
 const Row = styled.div`

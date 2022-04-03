@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect, styled } from "frontity";
+import BlogList from './BlogList';
 
 
 
@@ -17,6 +18,7 @@ const Blog = ({ state }) => {
                     <p>Retrouvez mes articles de blog et mes vidéos dans lesquels je vous partage ma veille, mes actualités et mes astuces pour optimiser votre visibilité sur le web, remplir vos objectifs grâce à une stratégie digitale bien définie. On parle wordpress, Front-end, Google Analytics, Google Tag Manager et bien d’autres choses 😉</p>
                 </ColRight>
             </Row>
+            <BlogList />
         </Section>
     )
 }
@@ -24,9 +26,6 @@ const Blog = ({ state }) => {
 export default connect(Blog);
 
 const Section = styled.div`
-    padding: 150px 7%;
-    background: url('https://www.tristantornatore.fr/wp-content/uploads/2022/03/background-noise.webp');
-
 `
 
 const Row = styled.div`

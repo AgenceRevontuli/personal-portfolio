@@ -57,6 +57,7 @@ const marsTheme = {
       },
       beforeSSR: async ({ state, actions }) => {
         await actions.source.fetch("/projets");
+        await actions.source.fetch("/temoignages");
       },
     },
   },

@@ -31,7 +31,7 @@ const settings = {
             ],
           ],
           "featured": {
-            "showOnList": false,
+            "showOnList": true,
             "showOnPost": false
           }
         }
@@ -47,6 +47,11 @@ const settings = {
             type: "projets",
             endpoint: "projets",
             archive: "/projets"
+          },
+          {
+            type: "temoignages",
+            endpoint: "temoignages",
+            archive: "/temoignages"
           }
         ],
           postsPage: "/astuces-digitales/"

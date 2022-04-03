@@ -12,7 +12,8 @@ const MesProjets = ({ state }) => {
         <Section>
             <Row>
                 <h2>Sélection de projets Web</h2>
-                <span>2022</span>
+                <p>Des références de clients avec qui j'ai eu la chance de collaborer sur leur stratégie digitale et leur besoin de création et refonte de site internet</p>
+                <Years>2022</Years>
                 <Portfolio />
             </Row>
         </Section>
@@ -22,8 +23,6 @@ const MesProjets = ({ state }) => {
 export default connect(MesProjets);
 
 const Section = styled.div`
-    padding: 150px 7%;
-    background: url('https://www.tristantornatore.fr/wp-content/uploads/2022/03/background-noise.webp');
 `
 
 const Row = styled.div`
@@ -31,13 +30,19 @@ const Row = styled.div`
     h2{
         font-size: 3em;
     }
-    span {
-        display: block;
-        position: absolute;
-        top: -170px;
-        right: 0;
-        font-size: 16em;
-        font-weight: 900;
-        opacity: 0.1;
+    p {
+        max-width: 600px;
+        line-height: 1.8em;
+        margin-bottom: 80px;
     }
+`
+
+const Years = styled.span `
+    display: block;
+    position: absolute;
+    top: -170px;
+    right: 0;
+    font-size: 16em;
+    font-weight: 900;
+    opacity: 0.1;
 `

@@ -60,11 +60,17 @@ const Theme = ({ state }) => {
 export default connect(Theme);
 
 const globalStyles = css`
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     margin: 0;
     font-family: "Poppins";
     font-size: 16px;
     color: #343B4E;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
   }
   a,
   a:visited {
@@ -75,4 +81,5 @@ const globalStyles = css`
 
 
 const Main = styled.div`
+
 `;

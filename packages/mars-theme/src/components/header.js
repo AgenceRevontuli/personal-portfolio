@@ -30,6 +30,9 @@ const Container = styled.div`
   color: #343B4E;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 1920px) {
+    padding: 35px 12%;
+  }
 `;
 
 const Logo = styled.div`

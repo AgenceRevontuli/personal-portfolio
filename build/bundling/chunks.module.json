@@ -1,14 +1,28 @@
 {
   "errors": [],
   "warnings": [],
-  "hash": "b2a73739c22c525a081e",
+  "hash": "095a3f483386e0e1d4b3",
   "publicPath": "",
   "outputPath": "/Users/ironmac/Documents/1_Devlopp/personal-portfolio/build/static",
   "assetsByChunkName": {
     "list": "list.module.js",
-    "personal-portfolio": "personal-portfolio.module.js"
+    "personal-portfolio": [
+      "personal-portfolio.module.js",
+      "personal-portfolio.da63019d290b7ca3db84.hot-update.js"
+    ]
   },
   "assets": [
+    {
+      "name": "da63019d290b7ca3db84.hot-update.json",
+      "size": 60,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
     {
       "name": "list.module.js",
       "size": 47389,
@@ -22,8 +36,23 @@
       "emitted": false
     },
     {
+      "name": "personal-portfolio.da63019d290b7ca3db84.hot-update.js",
+      "size": 13104,
+      "chunks": [
+        "personal-portfolio"
+      ],
+      "chunkNames": [
+        "personal-portfolio"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
       "name": "personal-portfolio.module.js",
-      "size": 7005888,
+      "size": 7149246,
       "chunks": [
         "personal-portfolio"
       ],
@@ -41,7 +70,8 @@
         "personal-portfolio"
       ],
       "assets": [
-        "personal-portfolio.module.js"
+        "personal-portfolio.module.js",
+        "personal-portfolio.da63019d290b7ca3db84.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -68,7 +98,8 @@
     {
       "id": "personal-portfolio",
       "files": [
-        "personal-portfolio.module.js"
+        "personal-portfolio.module.js",
+        "personal-portfolio.da63019d290b7ca3db84.hot-update.js"
       ]
     }
   ]
