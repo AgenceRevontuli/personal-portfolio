@@ -4,7 +4,7 @@ import Intro from './sections/Intro';
 import MesProjets from './sections/MesProjets';
 import Testimonials from './sections/Testimonials';
 import Blog from './sections/Blog';
-
+import Link from "../link";
 
 
 
@@ -30,7 +30,9 @@ const Home = ({ state }) => {
                     <SubMenu>
                         <ul>
                             <li>
-                                À propos de moi
+                                <Link link="https://www.tristantornatore.fr/developpeur-front-end/">
+                                    À propos de moi
+                                </Link>
                             </li>
                             <li>
                                 Mon parcours
@@ -68,7 +70,7 @@ const Section = styled.div`
 `;
 
 const Article = styled.div`
-    padding: 200px 7%;
+    padding: 200px 20%;
     background: url(${props => props.background || ""});
     @media screen and (max-width: 1920px) {
         padding: 80px 12%;

@@ -3,7 +3,6 @@ import { connect, styled } from "frontity";
 
 
 const TestimonialsItem = ({ testimonial }) => {
-    console.log(testimonial);
 
     return (
         <Testimonial>

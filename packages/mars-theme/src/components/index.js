@@ -8,6 +8,7 @@ import Title from "./title";
 import PageError from "./page-error";
 import Home from "./templates/Home";
 import Footer from "./footer";
+import About from "./templates/About";
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -27,7 +28,7 @@ const Theme = ({ state }) => {
       <Title />
       <Head>
         <meta name="description" content={state.frontity.description} />
-        <html lang="en" />
+        <html lang="fr" />
       </Head>
 
       {/* Add some global styles for the whole site, like body or a's. 
@@ -47,6 +48,7 @@ const Theme = ({ state }) => {
           <Home when={data.isHome} />
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
+          <About when={data.isPostType && state.router.link=='/developpeur-front-end/'} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />
         </Switch>
@@ -77,6 +79,10 @@ const globalStyles = css`
     color: inherit;
     text-decoration: none;
   }
+  .Spotify {
+    border: 1px solid #343B4E;
+    box-shadow: -4px 4px 0px #343B4E;
+}
 `;
 
 
