@@ -40,7 +40,7 @@ const Footer = ({ state }) => {
 export default connect(Footer);
 
 const Section = styled.div`
-    padding: 150px 7% 30px 7%;
+    padding: 150px 20% 30px 20%;
     background: url('https://www.tristantornatore.fr/wp-content/uploads/2022/03/background-noise.webp');
 
 `
