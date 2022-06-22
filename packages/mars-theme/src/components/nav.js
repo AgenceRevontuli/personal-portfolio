@@ -65,11 +65,10 @@ const NavItem = styled.div`
 
   &:last-of-type {
     margin-right: 0;
-
-    &:after {
-      content: "";
-      display: inline-block;
-      width: 24px;
-    }
+    border: 2px solid #343B4E;
+    text-align: center;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
   }
 `;
