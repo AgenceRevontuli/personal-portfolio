@@ -16,6 +16,7 @@ const Contact = ({ state, actions, libraries }) => {
                 <p>Un projet, besoin d'un conseil, je vous propose que l'on se contacte rapidement pour échanger ensemble sur vos problématiques et trouver les solutions rapidement.</p>
            </Header>
            <ContactForm>
+            <Html2React html={page.content.rendered} />
            </ContactForm>
         </Section>
     )
