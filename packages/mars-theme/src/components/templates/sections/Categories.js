@@ -34,6 +34,7 @@ const Category = styled.div`
     border: 2px solid #343B4E;
     border-radius: 2px;
     margin-right: 10px;
+    display: inline-block;
     h4 {
         margin: 0;
         font-size: 0.8em;

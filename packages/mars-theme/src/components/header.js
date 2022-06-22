@@ -9,7 +9,7 @@ const Header = ({ state }) => {
           <Container>
             <Logo>
               <Link link="/">
-                <span>TRISTAN TORNATORE</span>
+                <p>TRISTAN TORNATORE</p>
               </Link>
             </Logo>
             <MobileMenu />

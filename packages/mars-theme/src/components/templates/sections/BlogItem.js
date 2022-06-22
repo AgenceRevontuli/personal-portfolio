@@ -40,7 +40,7 @@ const BlogItem = ({ state, post }) => {
 export default connect(BlogItem);
 
 const BlogPublication = styled.div`
-    width: 33%;
+    flex: 1 1 25%;
     border: 1px solid #343B4E;
     background-color: #fff;
     transition: all 0.2s;

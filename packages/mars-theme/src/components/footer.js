@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect, styled } from "frontity";
+import Link from "./link";
 
 
 
@@ -16,18 +17,16 @@ const Footer = ({ state }) => {
                 </Col1>
                 <Col2>
                     <h3>Freelance digital</h3>
-                    <p>Freelance wordpress à Caen</p>
-                    <p>Freelance Google Ads à Caen</p>
-                    <p>Freelance Facebook Ads à Caen</p>
-                    <p>Freelance wordpress à Caen</p>
-                    <p>Freelance wordpress à Caen</p>
+                    <p><Link link="#">Freelance wordpress à Caen</Link></p>
+                    <p><Link link="#">Freelance Google Ads à Caen</Link></p>
+                    <p><Link link="#">Freelance Facebook Ads à Caen</Link></p>
                 </Col2>
                 <Col3>
                     <h3>Informations utiles</h3>
-                    <p>Mention Légales</p>
-                    <p>Politique de confidentialité</p>
-                    <p>06 31 49 63 05</p>
-                    <p>tristan@revontuli.fr</p>
+                    <p><Link link="#">Mention Légales</Link></p>
+                    <p><Link link="#">Politique de confidentialité</Link></p>
+                    <p><Link link="#">06 31 49 63 05</Link></p>
+                    <p><Link link="#">tristan@revontuli.fr</Link></p>
                 </Col3>
                 <Copyright>
                     <p>© Design et Développement par Tristan Tornatore - 2022</p>
@@ -42,6 +41,9 @@ export default connect(Footer);
 const Section = styled.div`
     padding: 150px 20% 30px 20%;
     background: url('https://www.tristantornatore.fr/wp-content/uploads/2022/03/background-noise.webp');
+    @media screen and (max-width: 1920px) {
+        padding: 80px 12%;
+    }
 
 `
 

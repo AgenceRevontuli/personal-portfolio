@@ -18,7 +18,7 @@ const Home = ({ state }) => {
                 <HeroSection>
                     <HeroText>
                         <HeroSubTitle>
-                            <div><p>Freelance Digital</p></div>
+                            <div><p>Tristan TORNATORE - Freelance Marketing Digital</p></div>
                             <div><p>CAEN NORMANDIE ET PARIS</p></div>
                         </HeroSubTitle>
                         <h1>Développeur front-end<br/>Acquisition SEO & SEA<br/>Tracking & Analyse Data</h1>

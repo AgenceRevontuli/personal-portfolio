@@ -9,6 +9,7 @@ import PageError from "./page-error";
 import Home from "./templates/Home";
 import Footer from "./footer";
 import About from "./templates/About";
+import Contact from "./templates/Contact";
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -49,6 +50,7 @@ const Theme = ({ state }) => {
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
           <About when={data.isPostType && state.router.link=='/developpeur-front-end/'} />
+          <Contact when={data.isPostType && state.router.link=='/contacter-tristan-freelance-wordpress/'} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />
         </Switch>

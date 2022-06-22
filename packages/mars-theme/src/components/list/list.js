@@ -8,6 +8,15 @@ const List = ({ state }) => {
 
   return (
     <Container>
+        {/* If the list is blog, we render a title. */}
+        {data.isArchive && (
+        <Header>
+          <p><span>Blog</span></p>
+          <h1>Astuces et Actualités sur le marketing digital</h1>
+          <p>Retrouvez mes dernières réflexions et recherches sur les sujets d'acquisition, outils digitaux et développement web.</p>
+
+        </Header>
+      )}
       {/* If the list is a taxonomy, we render a title. */}
       {data.isTaxonomy && (
         <Header>
@@ -22,14 +31,16 @@ const List = ({ state }) => {
           Author: <b>{decode(state.source.author[data.id].name)}</b>
         </Header>
       )}
+      <Publications>
+              {/* Iterate over the items of the list. */}
+              {data.items.map(({ type, id }) => {
+                const item = state.source[type][id];
+                // Render one Item component for each one.
+                return <Item key={item.id} item={item} />;
+              })}
+              <Pagination />
+      </Publications>
 
-      {/* Iterate over the items of the list. */}
-      {data.items.map(({ type, id }) => {
-        const item = state.source[type][id];
-        // Render one Item component for each one.
-        return <Item key={item.id} item={item} />;
-      })}
-      <Pagination />
     </Container>
   );
 };
@@ -37,14 +48,49 @@ const List = ({ state }) => {
 export default connect(List);
 
 const Container = styled.section`
-  width: 800px;
+  padding: 150px 20% 30px 20%;
   margin: 0;
   padding: 24px;
   list-style: none;
+  @media screen and (max-width: 1920px) {
+    padding: 80px 12%;
+  }
 `;
 
-const Header = styled.h3`
-  font-weight: 300;
-  text-transform: capitalize;
-  color: rgba(12, 17, 43, 0.9);
+const Header = styled.div`
+  width: 100%;
+  text-align: center;
+  h1 {
+    font-size: 4.430em;
+    margin: 0px auto;
+    max-width: 800px;
+  }
+  p {
+    font-size: 1.340em;
+    margin: 40px auto;
+    max-width: 800px;
+  }
+  span {
+    font-size: 1em;
+    font-weight: 700;
+  }
 `;
+
+const Publications = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 150px 0px;
+    & article:first-child {
+      flex: 1 1 66.66%;
+      display: flex;
+      gap: 50px;
+      & :nth-child(2) {
+        flex: 1 1 40%;
+      }
+    }
+    img {
+      max-height: 500px!important;
+    }
+`
