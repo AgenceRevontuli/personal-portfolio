@@ -4,7 +4,7 @@ const settings = {
     "frontity": {
       "url": "https://www.tristantornatore.fr/",
       "title": "Freelance Développeur Front-End | Wordpress | SEO&SEA - Tristan Tornatore",
-      "description": "Création et refonte de site web pour atteindre vos objectifs et faire des conversions sur le web. Découvrez mes projets. "
+      "description": "Création et refonte de site web pour atteindre vos objectifs et faire des conversions sur le web. Disponible dès maintenant pour vos projets."
     }
   },
   "packages": [

@@ -30,18 +30,24 @@ const Home = ({ state }) => {
                     <SubMenu>
                         <ul>
                             <li>
-                                <Link link="https://www.tristantornatore.fr/developpeur-front-end/">
+                                <Link link="/developpeur-front-end/">
                                     À propos de moi
                                 </Link>
                             </li>
                             <li>
-                                Mon parcours
+                                <Link link="/developpeur-front-end/">
+                                    Mon parcours
+                                </Link>
                             </li>
                             <li>
-                                Travailler avec moi
+                                <Link link="/contacter-tristan-freelance-wordpress/">
+                                    Travailler avec moi
+                                </Link>
                             </li>
                             <li>
-                                Mes astuces Digitales
+                                <Link link="/astuces-digitales/">
+                                    Mes astuces Digitales
+                                </Link>
                             </li>
                         </ul>
                     </SubMenu>

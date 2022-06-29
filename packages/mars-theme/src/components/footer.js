@@ -5,8 +5,6 @@ import Link from "./link";
 
 
 const Footer = ({ state }) => {
-    const data = state.source.get(state.router.link)
-    const page = state.source[data.type][data.id]
 
     return(
         <Section>
