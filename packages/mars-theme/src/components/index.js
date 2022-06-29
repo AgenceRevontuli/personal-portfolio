@@ -10,6 +10,7 @@ import Home from "./templates/Home";
 import Footer from "./footer";
 import About from "./templates/About";
 import Contact from "./templates/Contact";
+import Developp from "./templates/Developpement"
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -51,6 +52,7 @@ const Theme = ({ state }) => {
           <List when={data.isArchive} />
           <About when={data.isPostType && state.router.link=='/developpeur-front-end/'} />
           <Contact when={data.isPostType && state.router.link=='/contacter-tristan-freelance-wordpress/'} />
+          <Developp when={data.isPostType && state.router.link=='/developpement-web/'} />
           <Post when={data.isPostType} />
           <PageError when={data.isError} />
         </Switch>

@@ -26,7 +26,7 @@ const Container = styled.div`
   background: url('https://www.tristantornatore.fr/wp-content/uploads/2022/03/background-noise.webp');
   max-width: 100%;
   box-sizing: border-box;
-  padding: 24px 7%;
+  padding: 24px 20%;
   color: #343B4E;
   display: flex;
   justify-content: space-between;
