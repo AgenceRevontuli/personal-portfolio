@@ -1,28 +1,14 @@
 {
   "errors": [],
   "warnings": [],
-  "hash": "25e221db8489f0fce4ca",
+  "hash": "af804d077206f4233e47",
   "publicPath": "",
   "outputPath": "/Users/ironmac/Documents/1_Devlopp/personal-portfolio/build/static",
   "assetsByChunkName": {
     "list": "list.module.js",
-    "personal-portfolio": [
-      "personal-portfolio.module.js",
-      "personal-portfolio.2d8b12692a0eb4ce70d1.hot-update.js"
-    ]
+    "personal-portfolio": "personal-portfolio.module.js"
   },
   "assets": [
-    {
-      "name": "2d8b12692a0eb4ce70d1.hot-update.json",
-      "size": 60,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true
-      },
-      "emitted": false
-    },
     {
       "name": "list.module.js",
       "size": 81864,
@@ -36,23 +22,8 @@
       "emitted": false
     },
     {
-      "name": "personal-portfolio.2d8b12692a0eb4ce70d1.hot-update.js",
-      "size": 151779,
-      "chunks": [
-        "personal-portfolio"
-      ],
-      "chunkNames": [
-        "personal-portfolio"
-      ],
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true
-      },
-      "emitted": false
-    },
-    {
       "name": "personal-portfolio.module.js",
-      "size": 7664204,
+      "size": 7664161,
       "chunks": [
         "personal-portfolio"
       ],
@@ -60,7 +31,7 @@
         "personal-portfolio"
       ],
       "info": {},
-      "emitted": false
+      "emitted": true
     }
   ],
   "filteredAssets": 0,
@@ -70,8 +41,7 @@
         "personal-portfolio"
       ],
       "assets": [
-        "personal-portfolio.module.js",
-        "personal-portfolio.2d8b12692a0eb4ce70d1.hot-update.js"
+        "personal-portfolio.module.js"
       ],
       "children": {},
       "childAssets": {}
@@ -98,8 +68,7 @@
     {
       "id": "personal-portfolio",
       "files": [
-        "personal-portfolio.module.js",
-        "personal-portfolio.2d8b12692a0eb4ce70d1.hot-update.js"
+        "personal-portfolio.module.js"
       ]
     }
   ]

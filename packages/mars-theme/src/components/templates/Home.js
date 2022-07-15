@@ -195,7 +195,7 @@ const Flotte = styled.div`
 const Flotte2 = styled.div`
     position: absolute;
     top: 50%;
-    right: -60px;
+    right: 0px;
     width: 60px;
     img {
         object-position: inherit;
