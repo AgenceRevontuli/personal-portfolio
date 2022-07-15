@@ -35,6 +35,14 @@ const Row = styled.div`
         line-height: 1.8em;
         margin-bottom: 80px;
     }
+    @media screen and (max-width: 680px) {
+        h2{
+        font-size: 2em;
+        }
+        p{
+            font-size: 1em;
+        }
+    }
 `
 
 const Years = styled.span `
@@ -45,4 +53,9 @@ const Years = styled.span `
     font-size: 16em;
     font-weight: 900;
     opacity: 0.1;
+    @media screen and (max-width: 680px) {
+        font-size: 6em;
+        top: -50px;
+        left: 50%;
+    }
 `

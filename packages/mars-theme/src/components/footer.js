@@ -55,6 +55,10 @@ const Row = styled.div`
         font-family: 'Space Grotesk', sans-serif;
         font-size: 1.3em;
     }
+    @media screen and (max-width: 680px) {
+       display: flex;
+       flex-direction: column;
+    }
 `
 
 const Col1 = styled.div`

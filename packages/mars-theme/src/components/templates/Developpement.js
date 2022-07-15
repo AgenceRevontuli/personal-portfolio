@@ -176,6 +176,11 @@ const ButtonPrincipal = styled.div`
 `
 
 const InfoSite = styled.div`
+    margin-bottom: 200px;
+    &:last-child {
+        margin-bottom: 0px;
+    }
+
     & > div {
         display: flex;
         gap: 40px;

@@ -25,7 +25,13 @@ const Home = ({ state }) => {
                         <p><span>Je suis un développeur web Freelance basé en France, à Caen en Normandie. Ex-Google for Startups coordinateur, j’ai l’habitude de proposer des expériences digitales complètes du site web jusqu’à la stratégie d’acquisition. </span></p>
                     </HeroText>
                     <HeroImage>
-                        <img src="https://www.tristantornatore.fr/wp-content/uploads/2022/03/Freelance-Developpeur-Web-Caen-Tristan-Tornatore.jpg" alt="Tristan Tornatore développeur front-end freelance et wordpress" />
+                        <img src="https://www.tristantornatore.fr/wp-content/uploads/2022/07/Tristan-TORNATORE-Google-Vivatech.jpg" alt="Tristan Tornatore développeur front-end freelance et wordpress" />
+                        <Flotte>
+                            <img src="https://www.tristantornatore.fr/wp-content/uploads/2022/07/logo-react-js.svg" alt="" />
+                        </Flotte>
+                        <Flotte2>
+                            <img src="https://www.tristantornatore.fr/wp-content/uploads/2022/07/adwords.svg" alt="" />
+                        </Flotte2>
                     </HeroImage>
                     <SubMenu>
                         <ul>
@@ -81,6 +87,9 @@ const Article = styled.div`
     @media screen and (max-width: 1920px) {
         padding: 80px 12%;
     }
+    @media screen and (max-width: 680px) {
+        padding: 40px 12%;
+    }
 `
 
 const HeroSection = styled.div`
@@ -89,7 +98,11 @@ const HeroSection = styled.div`
     grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    alignItems: top;
+    align-items: top;
+    @media screen and (max-width: 680px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 `;
 
 const HeroText = styled.div`
@@ -102,25 +115,131 @@ const HeroText = styled.div`
         font-size: 1.5em;
         line-height: 1.8em;
     }
+    @media screen and (max-width: 680px) {
+        text-align: center;
+        h1 {
+            font-size: 2em;
+        }
+        span {
+        font-size: 1em;
+    }
+    }
 `;
 
 const HeroImage = styled.div`
+    position: relative;
     grid-area: 1 / 3 / 4 / 4;
     text-align: right;
+    max-height: 500px; 
+    width: 450px;
     img {
         max-width: 100%;
-        border: 1px solid #343B4E;
-        border-radius: 15px;
+        max-height: 100%;
         margin-left: 50px; 
         margin-top: 70px;
+        object-fit: cover;
+    }
+    @media screen and (max-width: 680px) {
+       text-align: center;
+       width: 100%;
+       height: 370px;
+       img {
+        width: 100%;
+        margin-left: 0px; 
+        margin-top: 40px;
+        object-fit: cover;
+        object-position: center top;
+    }
+    margin-bottom: 80px;
     }
 `;
+
+const Flotte = styled.div`
+    width: 60px;
+    img {
+        object-position: inherit;
+        position: absolute;
+        top: 20%;
+        left: 20px;
+        background: #fff; 
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+        border-radius: 50%;
+        animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0% {
+            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.06);
+            transform: translatey(0px);
+        }
+        50% {
+            box-shadow: 0 25px 15px 0px rgba(0,0,0,0.02);
+            transform: translatey(-20px);
+        }
+        100% {
+            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.06);
+            transform: translatey(0px);
+        }
+    }
+
+    @media screen and (max-width: 680px) {
+        img {
+            left: -20px;
+        }
+    }
+
+`
+
+const Flotte2 = styled.div`
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    width: 60px;
+    img {
+        object-position: inherit;
+        background: #fff; 
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+        border-radius: 50%;
+        animation: floating 4s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+        0% {
+            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.06);
+            transform: translatey(0px);
+        }
+        50% {
+            box-shadow: 0 25px 15px 0px rgba(0,0,0,0.02);
+            transform: translatey(-20px);
+        }
+        100% {
+            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.06);
+            transform: translatey(0px);
+        }
+    }
+
+    @media screen and (max-width: 680px) {
+        right: 0px;
+    }
+
+`
 
 const HeroSubTitle = styled.div`
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
     border-bottom: 1px solid #343B4E;
+    @media screen and (max-width: 680px) {
+       flex-wrap: wrap-reverse;
+       justify-content: center;
+       text-align: center;
+       font-weight: 700;
+       font-size: 0.8em;
+    }
 `;
 
 const SubMenu = styled.div`
@@ -150,6 +269,10 @@ const SubMenu = styled.div`
         align-self: flex-start;
         margin-top: 50px;
       }
+
+    @media screen and (max-width: 680px) {
+        display: none;
+    }
 `
 
 const ArrowDown = styled.div`
@@ -163,5 +286,13 @@ const ArrowDown = styled.div`
     }
     @media screen and (max-width: 1920px) {
         margin-top: 30px;
-      }
+    }
+    @media screen and (max-width: 680px) {
+        text-align: center;
+        width: 100%;
+        img {
+            width: 3%;
+            position: inherit;
+        }
+    }
 `

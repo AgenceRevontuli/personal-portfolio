@@ -34,6 +34,10 @@ const Row = styled.div`
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 50px;
     grid-row-gap: 0px;
+    @media screen and (max-width: 680px) {
+        display: flex;
+        flex-direction: column;
+    }
 `
 
 const ColLeft = styled.div`

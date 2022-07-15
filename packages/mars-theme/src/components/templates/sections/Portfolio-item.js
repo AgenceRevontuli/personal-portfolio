@@ -31,6 +31,9 @@ const ProjetItem = styled.div`
     padding: 20px;
     background-color: #fff;
     box-shadow: 0px 0px 25px rgba(0,0,0,0.05);
+    @media screen and (max-width: 680px) {
+        width: 100%;
+    }
 `
 
 const Content = styled.div`

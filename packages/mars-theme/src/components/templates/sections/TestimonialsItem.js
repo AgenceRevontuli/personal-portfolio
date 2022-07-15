@@ -41,4 +41,11 @@ const Testimonial = styled.div`
         align-items: center;
         gap: 40px;
     }
+    @media screen and (max-width: 680px) {
+        width: 100%;
+        > div {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    }
 `

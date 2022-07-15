@@ -36,6 +36,10 @@ const Row = styled.div`
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    @media screen and (max-width: 680px) {
+        display: flex;
+        flex-direction: column;
+    }
 `
 
 const ColLeft = styled.div`
@@ -50,6 +54,15 @@ const ColLeft = styled.div`
         color: #ADADAD;
         font-weight: 500;
     }
+    @media screen and (max-width: 680px) {
+        span {
+        font-size: 2em;
+        font-weight: 800;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+    }
 `
 
 const ColRight = styled.div`
@@ -59,6 +72,12 @@ const ColRight = styled.div`
         line-height: 1.8em;
         font-weight: 400;
     }
+    @media screen and (max-width: 680px) {
+        p{
+            font-size: 1em;
+        }
+    }
+    
 `
 
 const RowBottom = styled.div`

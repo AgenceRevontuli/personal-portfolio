@@ -37,6 +37,5 @@ const Row = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    aling-items: center;
     gap: 30px;
 `

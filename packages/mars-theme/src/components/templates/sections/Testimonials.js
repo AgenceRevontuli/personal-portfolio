@@ -51,4 +51,7 @@ const Row = styled.div`
 const ListeTemoignages = styled.div`
     display: flex;
     gap: 30px;
+    @media screen and (max-width: 680px) {
+        flex-wrap: wrap;
+    }
 `
