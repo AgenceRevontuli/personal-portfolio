@@ -27,7 +27,7 @@ const Home = ({ state }) => {
                     <HeroImage>
                         <img src="https://www.tristantornatore.fr/wp-content/uploads/2022/07/Tristan-TORNATORE-Google-Vivatech.jpg" alt="Tristan Tornatore développeur front-end freelance et wordpress" />
                         <Flotte>
-                            <img src="https://www.tristantornatore.fr/wp-content/uploads/2022/07/logo-react-js.svg" alt="" />
+                            <img src="https://www.tristantornatore.fr/wp-content/uploads/2022/07/React-icon.svg" alt="" />
                         </Flotte>
                         <Flotte2>
                             <img src="https://www.tristantornatore.fr/wp-content/uploads/2022/07/adwords.svg" alt="" />
@@ -87,7 +87,10 @@ const Article = styled.div`
     @media screen and (max-width: 1920px) {
         padding: 80px 12%;
     }
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 1740px) {
+        padding: 80px 8%;
+    }
+    @media screen and (max-width: 880px) {
         padding: 40px 12%;
     }
 `
@@ -99,7 +102,7 @@ const HeroSection = styled.div`
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     align-items: top;
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 880px) {
         display: flex;
         flex-wrap: wrap;
     }
@@ -115,7 +118,15 @@ const HeroText = styled.div`
         font-size: 1.5em;
         line-height: 1.8em;
     }
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 1740px) {
+        h1 {
+            font-size: 3.3em;
+        }
+        span {
+        font-size: 1.3em;
+        }
+    }
+    @media screen and (max-width: 880px) {
         text-align: center;
         h1 {
             font-size: 2em;
@@ -158,6 +169,7 @@ const Flotte = styled.div`
     width: 60px;
     img {
         object-position: inherit;
+        object-fit: contain;
         position: absolute;
         top: 20%;
         left: 20px;
@@ -184,7 +196,7 @@ const Flotte = styled.div`
         }
     }
 
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 880px) {
         img {
             left: -20px;
         }
@@ -222,7 +234,7 @@ const Flotte2 = styled.div`
         }
     }
 
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 880px) {
         right: 0px;
     }
 
@@ -233,7 +245,7 @@ const HeroSubTitle = styled.div`
     justify-content: space-between;
     padding-bottom: 10px;
     border-bottom: 1px solid #343B4E;
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 880px) {
        flex-wrap: wrap-reverse;
        justify-content: center;
        text-align: center;
@@ -270,7 +282,22 @@ const SubMenu = styled.div`
         margin-top: 50px;
       }
 
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 1740px) {
+       ul li {
+        font-size: 0.8em;
+        padding: 15px 15px 15px 0px;
+        margin-right: 5px;
+        min-width: 130px;
+       }
+    }
+
+    @media screen and (max-width: 1240px) {
+       ul li {
+        display: none;
+       }
+    }
+
+    @media screen and (max-width: 880px) {
         display: none;
     }
 `
@@ -287,10 +314,17 @@ const ArrowDown = styled.div`
     @media screen and (max-width: 1920px) {
         margin-top: 30px;
     }
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 1740px) {
+        img {
+            top: 50px;
+            width: 3%;
+        }
+    }
+    @media screen and (max-width: 880px) {
         text-align: center;
         width: 100%;
         img {
+            top: 0;
             width: 3%;
             position: inherit;
         }
